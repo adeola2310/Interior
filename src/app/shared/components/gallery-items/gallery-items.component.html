@@ -1,0 +1,38 @@
+
+<!-- food gallery -->
+<section class="banner_bottom proj py-5">
+  <div class="wrap_view">
+    <h3 class="heading text-center text-uppercase mb-5"> Gallery </h3>
+    <div class="inner_sec">
+
+
+      <ul class="portfolio-area">
+
+        <li class="portfolio-item2 mb-2" [attr.data-id]="'id-' + i" [attr.data-type]="'cat-item-' + i" *ngFor="let gallery of settings.get('gallery');let i = index">
+          <div>
+							<span class="image-block img-hover">
+							<!--<a class="image-zoom" [href]="gallery['url']" rel="prettyPhoto[gallery]">-->
+
+									<img [src]="gallery['url']" class="img-responsive " alt="Cafe In image">
+									<div class="port-info d-none">
+											<h5>{{gallery['title']}}</h5>
+											<p>{{gallery['description']}}</p>
+										</div>
+							<!--</a>-->
+						</span>
+          </div>
+        </li>
+
+
+
+
+      </ul>
+      <!--end portfolio-area -->
+
+      <div class="clearfix"></div>
+    </div>
+
+  </div>
+</section>
+<!--//food gallery-->
+
